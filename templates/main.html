@@ -1,0 +1,17 @@
+<!-- Variables:
+ - following_list: users logged-in user is following. If no user, or no users followed, then empty list.
+ - users: users not followed by logged-in user. If no users, then empty list.
+ -->
+
+{% extends "base.html" %}
+
+{% block content %}
+    <ul class="userList">
+        {% for user in following_list %}
+        <li><a href="{{ url_for('user', username=user) }}" class="followedUser">{{ user }}</a></li>
+        {% endfor %}
+        {% for user in users %}
+        <li><a href="{{ url_for('user', username=user) }}" class="user">{{ user }}</a></li>
+        {% endfor %}
+    </ul>
+{% endblock content %}
