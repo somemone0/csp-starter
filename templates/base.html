@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Flask Project 2</title>
+        <link href="{{url_for('static', 'index.css')}}" rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter&family=Poppins&display=swap" rel="stylesheet">
+
+
+        <meta charset="utf-8">
+    </head>
+    <body>
+    <div class="header">
+      <ul class="navbar">
+        <li class="elementLeft"><span class="title">AP CSP Project 2</span></li>
+        <li class="element"><a href="{{ url_for('main') }}" class="navLink">Users</a></li>
+        {% if loggedIn %}
+            <li class="element"><a href="{{ url_for('create_post') }}" class="navLink">Create Post</a></li>
+            <li class="element"><a href="{{ url_for('logout') }}" class="navLink">Logout</a></li>
+        {% else %}
+            <li class="element"><a href="{{ url_for('login') }}" class="navLink">Login</a></li>
+            <li class="element"><a href="{{ url_for('signup') }}" class="navLink">Signup</a></li>
+        {% endif %}
+      </ul>
+    </div>
+
+    <div class="container">
+        {% block content %}
+        {% endblock content %}
+    </div>
+    </body>
+</html>

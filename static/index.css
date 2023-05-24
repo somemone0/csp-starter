@@ -1,0 +1,54 @@
+.title {
+  font-family: "Poppins", sans-serif;
+  text-decoration: underline;
+  font-size: 2em;
+  color: white;
+  padding: 5px;
+}
+.container {
+  margin-left: 100px;
+}
+
+.followedUser, .user {
+  font-family: "Inter", sans-serif;
+  margin-bottom: 9px;
+  color: purple;
+}
+
+.followedUser {
+  color: red;
+}
+
+.navbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow:hidden;
+  background-color: #333;
+}
+
+.element {
+  float: right;
+}
+
+.elementLeft {
+  float: left;
+}
+
+.element, .navLink {
+  display: block;
+  color: white;
+  padding: 7px 8px;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+}
+
+.navLink:hover {
+  background-color: #111;
+}
+.userList {
+  list-style-type: none;
+}
+.userList li {
+  padding-bottom: 10px;
+}
